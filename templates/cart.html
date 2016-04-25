@@ -1,0 +1,33 @@
+<ion-view title="Cart" id="page2">
+    <ion-content padding="true" class="has-header">
+        <div class="row" ng-repeat="t in cart">
+
+            <div class="col col-50">
+                <img ui-sref="menu.detail({id: t.id})" ng-src="{{t.image}}" width="100%" height="100%">
+            </div>
+            <div class="col col-50">
+                <button class="button" ng-click="remove(t)" style="margin-left: -15px; color: red;">
+                    <i class="icon ion-close"></i>
+                </button>
+                <p><strong>{{t.name}}</strong></p>
+                <p>Anthropologie</p>
+                <p style="color: red; font-size: initial;">Price : ${{t.price | number:2}}</p>
+                <label>
+                    Quantity
+                    <form name="myForm">
+                        <select ng-options="quantity for quantity in ['1', '2', '3']" ng-model="t.quantity" ng-init="t.quantity='1'">
+                        </select>
+                    </form>
+                </label>
+                <br>
+                <br>
+            </div>
+            <p ng-if="numitem>=1">If you want to buy more than 3 quantity please contact us to have promote</p>           
+        </div>
+        <br>
+        <p ng-if="numitem>=1" class="subtotal" style="color: red; font-size: initial;">Subtotal : ${{totalprice(cart) | number:2}}</p>
+        <p ng-if="numitem==0"> Your cart is empty </p>
+        <button ui-sref="menu.checkout" ng-if="numitem>=1" class="button button-assertive  button-block icon-left ion-clipboard">Check Out</button>
+
+    </ion-content>
+</ion-view>

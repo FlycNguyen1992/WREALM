@@ -1,0 +1,65 @@
+<ion-view title="Check Out" id="page2">
+    <ion-content padding="true" class="has-header">
+        
+        <div class="list" ng-repeat="t in cart">
+
+    <a class="item item-thumbnail-left">
+      <img ng-src="{{t.image}}">
+      <h2 style="color: indianred;">{{t.name}}</h2>
+        <p>Quality : {{t.quantity}} </p>
+        <p>Price : ${{t.quantity*t.price | number:2}} </p>
+      </a>
+    </div>
+     <p class="subtotal" style="color: red; font-size: initial;margin-top: 20px;">Subtotal : ${{totalprice(cart) | number:2}}</p>
+       
+        <div class="list">
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Email</span>
+    <input type="text" placeholder="ynguyen8@csc.com">
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">First Name</span>
+    <input type="text" placeholder="Y">
+  </label>
+<label class="item item-input item-stacked-label">
+    <span class="input-label">Last Name</span>
+    <input type="text" placeholder="Nguyen">
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Adress</span>
+    <input type="text" placeholder="366 Nguyen Trai">
+  </label>
+    <label class="item item-input item-stacked-label">
+    <span class="input-label">Phone</span>
+    <input type="text" placeholder="0963312895">
+  </label>
+        
+</div>
+        
+        <div class="list card">
+
+  <div class="item item-avatar" style="background-color: antiquewhite;">
+    <img src="Resources/visa-logo.jpg">
+ </div>
+
+  <div class="item item-body">
+     <label class="item item-input item-stacked-label">
+    <input type="text" placeholder="Card number">
+         </label>
+      <label class="item item-input item-stacked-label">
+    <input type="text" placeholder="Name on card">
+         </label>
+      <label class="item item-input item-stacked-label">
+    <input type="text" placeholder="MM/YY">
+         </label>
+      <label class="item item-input item-stacked-label">
+    <input type="text" placeholder="CVV">
+         </label>
+  </div>
+
+</div>
+                
+<button  ng-click = "showConfirm()" class="button button-assertive  button-block ">Complete Order</button>      
+
+    </ion-content>
+</ion-view>

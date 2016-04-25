@@ -1,0 +1,23 @@
+body {
+
+    font-family: 'Asap', sans-serif;
+    font-size: 13px;
+    color: #555;
+}
+
+.row {
+    flex-wrap: wrap;
+}
+
+.desc {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px;
+}
+
+hr {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: -2px;
+}
