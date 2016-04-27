@@ -24,7 +24,7 @@
                 <label class="item-input-wrapper">
                   <input ng-model="sname" type="text" placeholder="Search by name..." >
                 </label>
-                <a class="button button-icon ion-ios-search" ui-sref="menu.search({name: sname})">
+                <a ng-disabled="sname==null" class="button button-icon ion-ios-search" ui-sref="menu.search({name: sname})">
                 </a>
               </div>
         </div>

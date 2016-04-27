@@ -1,4 +1,4 @@
-angular.module('app.controllers', [])
+angular.module('app.controllers', ['ui.router'])
 
 .controller("bagCtrl", ['$scope', '$firebaseArray', '$stateParams', function ($scope, $firebaseArray, $stateParams) {
     var ref = new Firebase("https://scorching-inferno-3570.firebaseio.com/");
@@ -9,7 +9,7 @@ angular.module('app.controllers', [])
 
 .controller("detailCtrl", ['$scope', '$firebaseArray', '$stateParams', function ($scope, $firebaseArray, $stateParams) {
     var ref = new Firebase("https://scorching-inferno-3570.firebaseio.com/");
-//    window.scrollTo(0, 0);
+    //    window.scrollTo(0, 0);
     var id = $stateParams.id;
     $scope.items = $firebaseArray(ref.orderByChild('id').equalTo(id));
     var listitem = {};
@@ -37,27 +37,27 @@ angular.module('app.controllers', [])
         $scope.relateitem = listitem2;
 
     })
-    
-    
+
+
 	    }])
 
-.controller('mainController', ['$window', '$scope', '$firebaseArray','$ionicPopup', function ($window, $scope, $firebaseArray,$ionicPopup) {
-//    var _selected;
-//    $scope.selected = undefined;
-//    var ref = new Firebase("https://scorching-inferno-3570.firebaseio.com/");
-//    $scope.statesWithFlags = $firebaseArray(ref);
-//    $scope.enter = function (id) {
-//        $window.location.href = '/index.html#/side-menu21/detail/' + id.id;
-//    }
+.controller('mainController', ['$window', '$scope', '$firebaseArray', '$ionicPopup', '$state', function ($window, $scope, $firebaseArray, $ionicPopup, $state) {
+    //    var _selected;
+    //    $scope.selected = undefined;
+    //    var ref = new Firebase("https://scorching-inferno-3570.firebaseio.com/");
+    //    $scope.statesWithFlags = $firebaseArray(ref);
+    //    $scope.enter = function (id) {
+    //        $window.location.href = '/index.html#/side-menu21/detail/' + id.id;
+    //    }
 
-   
-//    $scope.scrolltop = function () {
-//        window.scrollTo(0, 0);
-//    }
+
+    //    $scope.scrolltop = function () {
+    //        window.scrollTo(0, 0);
+    //    }
     $scope.showSearchbox = false;
-    $scope.btnClickShow = function(){
-          $scope.showSearchbox = !$scope.showSearchbox;  
-        };
+    $scope.btnClickShow = function () {
+        $scope.showSearchbox = !$scope.showSearchbox;
+    };
     $scope.cart = [];
     $scope.search = {};
     $scope.numitem = 0;
@@ -89,38 +89,39 @@ angular.module('app.controllers', [])
         });
         return sum;
     };
-    
-    
-     $scope.showConfirm = function() {
-	
-      var confirmPopup = $ionicPopup.confirm({
-         title: 'Complete Order',
-         template: 'Are you sure?'
-      });
 
-      confirmPopup.then(function(res) {
-         if(res) {
-        $window.location.href = '/index.html#/side-menu21/home';
-        $window.location.reload();
-         } else {
-            
-         }
-      });
-		
-   };
-    
-//    $scope.reloadRoute = function() {
-//         $window.location.href = '/index.html#/side-menu21/home';
-//    $window.location.reload();
-//       
-//};
 
-     
+    $scope.showConfirm = function () {
+
+        var confirmPopup = $ionicPopup.confirm({
+            title: 'Complete Order'
+            , template: 'Are you sure?'
+        });
+
+        confirmPopup.then(function (res) {
+            if (res) {
+                $scope.numitem =0;
+                $state.go('menu.home');
+//                $window.location.reload();
+            } else {
+
+            }
+        });
+
+    };
+
+    //    $scope.reloadRoute = function() {
+    //         $window.location.href = '/index.html#/side-menu21/home';
+    //    $window.location.reload();
+    //       
+    //};
+
+
 }])
 
-.controller("searchCtrl",["$scope","$firebaseArray","$stateParams",function($scope,$firebaseArray,$stateParams){          
-        var ref = new Firebase("https://scorching-inferno-3570.firebaseio.com/");
-        $scope.name = $stateParams.name;
-        $scope.items = $firebaseArray(ref);
-        
+.controller("searchCtrl", ["$scope", "$firebaseArray", "$stateParams", function ($scope, $firebaseArray, $stateParams) {
+    var ref = new Firebase("https://scorching-inferno-3570.firebaseio.com/");
+    $scope.name = $stateParams.name;
+    $scope.items = $firebaseArray(ref);
+
     }]);
