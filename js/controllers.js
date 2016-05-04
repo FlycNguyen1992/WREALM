@@ -58,8 +58,12 @@ angular.module('app.controllers', ['ui.router'])
     $scope.btnClickShow = function () {
         $scope.showSearchbox = !$scope.showSearchbox;
     };
+    
+    $scope.btnClickHide = function () {
+        $scope.showSearchbox = !$scope.showSearchbox;
+    };
     $scope.cart = [];
-    $scope.search = {};
+//    $scope.search = {};
     $scope.numitem = 0;
     $scope.addItem = function (id) {
         var f = true;
@@ -100,9 +104,10 @@ angular.module('app.controllers', ['ui.router'])
 
         confirmPopup.then(function (res) {
             if (res) {
-                $scope.numitem =0;
+//                $scope.numitem =0;
+//                $scope.cart = [];
                 $state.go('menu.home');
-//                $window.location.reload();
+                $window.location.reload();
             } else {
 
             }
@@ -122,6 +127,5 @@ angular.module('app.controllers', ['ui.router'])
 .controller("searchCtrl", ["$scope", "$firebaseArray", "$stateParams", function ($scope, $firebaseArray, $stateParams) {
     var ref = new Firebase("https://scorching-inferno-3570.firebaseio.com/");
     $scope.name = $stateParams.name;
-    $scope.items = $firebaseArray(ref);
-
+    $scope.data = $firebaseArray(ref);
     }]);

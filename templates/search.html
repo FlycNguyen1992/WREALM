@@ -3,9 +3,9 @@
          <div style="text-align:center;" ui-sref="menu.home">
             <img src="img/Riv51h4iRvGZQblHITdA_Logo2.jpg" width="90%" height="auto">
         </div>
-         <h4>You have search with "{{sname}}" key</h4>
+         <h4>You have search with "{{name}}" key</h4>
          <div class="row" >
-            <div class="col col-50" ng-repeat="p in items" >
+            <div class="col col-50" ng-repeat="p in data | filter: name" >
                 <div>
                     <img ui-sref="menu.detail({id: p.id})" ng-src="{{p.image}}" width="100%" height="100%">
                 </div>
