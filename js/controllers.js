@@ -104,13 +104,11 @@ angular.module('app.controllers', ['ui.router'])
 
         confirmPopup.then(function (res) {
             if (res) {
-//                $scope.numitem =0;
-//                $scope.cart = [];
+                $scope.numitem =0;
+                $scope.cart = [];
                 
-                $window.location.reload();
+//                $window.location.reload();
                 $state.go('menu.home');
-            } else {
-
             }
         });
 
