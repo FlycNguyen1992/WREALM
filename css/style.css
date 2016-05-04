@@ -3,6 +3,7 @@ body {
     font-family: 'Asap', sans-serif;
     font-size: 13px;
     color: #555;
+    
 }
 
 .row {
@@ -17,7 +18,8 @@ body {
 }
 
 hr {
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-bottom: -2px;
+    margin-left: 55px;
+    margin-right: 55px;
+    margin-bottom: 0px;
+    clear: both;
 }

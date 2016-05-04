@@ -106,8 +106,9 @@ angular.module('app.controllers', ['ui.router'])
             if (res) {
 //                $scope.numitem =0;
 //                $scope.cart = [];
-                $state.go('menu.home');
+                
                 $window.location.reload();
+                $state.go('menu.home');
             } else {
 
             }
