@@ -108,14 +108,12 @@ angular.module('app.controllers', ['ui.router'])
 //                $scope.cart = [];
                 
 //                $window.location.reload();
-                //history.go(0);
+//                history.go(0);
                 
 //                window.location.href = window.location.href;
-        
-                
-                
-                $.when( $window.location.reload(true) ).done(function( x ) {
-                $state.go('menu.home'); // Alerts "123"
+                                
+                $.when( $state.go('menu.home') ).done(function( x ) {
+                $window.location.reload(true); // Alerts "123"
 });
             }
         });
