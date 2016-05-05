@@ -109,9 +109,14 @@ angular.module('app.controllers', ['ui.router'])
                 
 //                $window.location.reload();
                 //history.go(0);
-                $window.location.reload(true);
+                
 //                window.location.href = window.location.href;
-                $state.go('menu.home');
+        
+                
+                
+                $.when( $window.location.reload(true) ).done(function( x ) {
+                $state.go('menu.home'); // Alerts "123"
+});
             }
         });
 
