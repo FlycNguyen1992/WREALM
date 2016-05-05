@@ -111,8 +111,7 @@ angular.module('app.controllers', ['ui.router'])
 //                history.go(0);
                 
 //                window.location.href = window.location.href;
-                               $scope.cart=[];                
-                        $scope.numitem=0;
+                       
                         $state.go('menu.home');
                         $window.location.reload();   
               
