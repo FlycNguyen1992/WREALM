@@ -108,8 +108,8 @@ angular.module('app.controllers', ['ui.router'])
 //                $scope.cart = [];
                 
 //                $window.location.reload();
-                history.go(0);
-                window.location.href = window.location.href;
+//                history.go(0);
+//                window.location.href = window.location.href;
                 $state.go('menu.home');
             }
         });
