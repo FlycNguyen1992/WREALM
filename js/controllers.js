@@ -41,7 +41,7 @@ angular.module('app.controllers', ['ui.router'])
 
 	    }])
 
-.controller('mainController', ['$window', '$scope', '$firebaseArray', '$ionicPopup', '$state','$timeout', function ($window, $scope, $firebaseArray, $ionicPopup, $state, $timeout) {
+.controller('mainController', ['$window', '$scope', '$firebaseArray', '$ionicPopup', '$state', '$timeout', function ($window, $scope, $firebaseArray, $ionicPopup, $state, $timeout) {
     //    var _selected;
     //    $scope.selected = undefined;
     //    var ref = new Firebase("https://scorching-inferno-3570.firebaseio.com/");
@@ -58,12 +58,12 @@ angular.module('app.controllers', ['ui.router'])
     $scope.btnClickShow = function () {
         $scope.showSearchbox = !$scope.showSearchbox;
     };
-    
+
     $scope.btnClickHide = function () {
         $scope.showSearchbox = !$scope.showSearchbox;
     };
     $scope.cart = [];
-//    $scope.search = {};
+    //    $scope.search = {};
     $scope.numitem = 0;
     $scope.addItem = function (id) {
         var f = true;
@@ -104,33 +104,32 @@ angular.module('app.controllers', ['ui.router'])
 
         confirmPopup.then(function (res) {
             if (res) {
-//                $scope.numitem =0;
-//                $scope.cart = [];
-                
-//                $window.location.reload();
-//                history.go(0);
-                
-//                window.location.href = window.location.href;
-                        
-                        
-                        
-//                        $state.go('menu.home');        
-                
-                $timeout(function() { 
-                    $state.go('menu.home'); 
-                    $window.location.reload();
-                });
-                
-                        
-                         
-//                        $state.go('menu.home', null, {reload: true});
+                //                $scope.numitem =0;
+                //                $scope.cart = [];
+
+                //                $window.location.reload();
+                //                history.go(0);
+
+                //                window.location.href = window.location.href;
+
+                                $state.go('menu.home'); 
+                               $window.location.reload();
+
+                //                        $state.go('menu.home');        
+
+                //                $timeout(function() { 
+                //                    
+                //                });
                 
               
-//                $.when( $state.go('menu.home') ).done(function( x ) {
-//                $window.location.reload(true); 
-//                
-//                       
-//});
+                //                        $state.go('menu.home', null, {reload: true});
+
+
+                //                $.when( $state.go('menu.home') ).done(function( x ) {
+                //                $window.location.reload(true); 
+                //                
+                //                       
+                //});
             }
         });
 
