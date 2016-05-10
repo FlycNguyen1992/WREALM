@@ -90,7 +90,10 @@ angular.module('app.controllers', ['ui.router'])
         confirmPopup.then(function (res) {
             if (res) {
                 $state.go('menu.home');
-                $window.location.reload();
+                setTimeout(function () {
+                    $window.location.reload();
+                }, 100);
+
             }
         });
     };
