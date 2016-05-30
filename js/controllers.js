@@ -46,7 +46,7 @@ angular.module('app.controllers', ['ui.router'])
     })
 	    }])
 
-.controller('mainController', ['$window', '$scope', '$firebaseArray', '$ionicPopup', '$state', function ($window, $scope, $firebaseArray, $ionicPopup, $state) {
+.controller('mainController', ['$window', '$scope', '$firebaseArray', '$ionicPopup', '$state','$ionicHistory', function ($window, $scope, $firebaseArray, $ionicPopup, $state,$ionicHistory) {
 
     $scope.showSearchbox = false;
     $scope.btnClickShow = function () {
@@ -105,10 +105,15 @@ angular.module('app.controllers', ['ui.router'])
 
         confirmPopup.then(function (res) {
             if (res) {
+                $scope.cart = [];
+                $scope.numitem = 0;
+                $ionicHistory.nextViewOptions({
+                disableBack: true
+                 }); 
                 $state.go('menu.home');
-                setTimeout(function () {
-                    $window.location.reload();
-                }, 100);
+//                setTimeout(function () {
+//                    $window.location.reload();
+//                }, 100);
 
             }
         });
