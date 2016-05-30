@@ -1,75 +1,30 @@
-<ion-view title="Home" id="page1">
+<ion-view title="Home">
     <ion-content padding="false">
-        <div style="text-align:center;" ui-sref="menu.home">
-            <img src="img/Riv51h4iRvGZQblHITdA_Logo2.jpg" width="90%" height="auto">
+        <div id="profile-info1">
+            <img id="profile-image1" src="img/me.jpg">
+            <h3 id="profile-name1">Hi, I'm Flyc!</h3>
+            <h3 id="profile-name2">Welcome to my App</h3>
         </div>
-        <a style="display:block;" ui-sref="menu.product({type:'Bag'})">
-            <div style="text-align:center;">
-                <img src="img/tD99vf9jTwGF7137lZQW_Mona Dress2.jpg" width="100%" height="auto">
-            </div>
-        </a>
-        <a style="display:block;" ui-sref="menu.product({type:'Dress'})">
-            <div style="text-align:center;">
-                <img src="img/MXNpauxWScOu4mGQZoUy_Mona Dress1.jpg" width="100%" height="auto">
-            </div>
-        </a>
-        <a style="display:block;" ui-sref="menu.product({type:'Shoes'})">
-            <div style="text-align:center;">
-                <img src="img/UUhHN3GQXCv29aG9r4h4_Mona Dress3.jpg" width="100%" height="auto">
-            </div>
-        </a>
-        <br>
+        <img class="backimg" src="img/back.jpg" width="100%" style="height:32%;">
 
-
-        <h4 style="text-align:center; color:gray;"><strong>Featured Products</strong></h4>
-        <hr>
-        <br>
-        <div class="row">
-            <div class="col col-50">
-                <div>
-                    <img ui-sref="menu.detail({id:'dress35'})" src="Resources/The Dress Shop/Belle Bustier Dress.jpg" width="100%" height="100%">
-                </div>
-                <div class="product-item">
-                    <p class="desc"><strong>Belle Bustier Dress</strong></p>
-                    <p>Anthropologie</p>
-                    <p>$635.00</p>
-                </div>
-            </div>
-            <div class="col col-50">
-                <div>
-                    <img ui-sref="menu.detail({id:'dress30'})" src="Resources/The Dress Shop/Ribboned Halter Dress.jpg" width="100%" height="100%">
-                </div>
-                <div class="product-item">
-                    <p class="desc"><strong>Ribboned Halter Dress</strong></p>
-                    <p>Anthropologie</p>
-                    <p>$355.00</p>
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="row">
-            <div class="col col-50">
-                <div>
-                    <img ui-sref="menu.detail({id:'dress15'})" src="Resources/The Dress Shop/Winter Rose Dress.jpg" width="100%" height="100%">
-                </div>
-                <div class="product-item">
-                    <p class="desc"><strong>Winter Rose Dress</strong></p>
-                    <p>Anthropologie</p>
-                    <p>$398.00</p>
-                </div>
-            </div>
-            <div class="col col-50">
-                <div>
-                    <img ui-sref="menu.detail({id:'dress8'})" src="Resources/The Dress Shop/Aurelie Dress.jpg" width="100%" height="100%">
-                </div>
-                <div class="product-item">
-                    <p class="desc"><strong>Aurelie Dress</strong></p>
-                    <p>Anthropologie</p>
-                    <p>$325.00</p>
-                </div>
-            </div>
-        </div>
-
-       
+        <table style="height: 68%; margin-top: -6px;" width="100%">
+            <tr>
+                <td class="pice1" ui-sref="menu.shop">
+                    <i class="fa fa-gift" aria-hidden="true"></i>
+                </td>
+                
+                <td class="pice2" ui-sref="menu.galery">
+                    <i class="fa fa-camera" aria-hidden="true"></i>
+                </td>
+            </tr>
+            <tr>
+                <td class="pice3" ui-sref="menu.contact">
+                    <i class="fa fa-comments" aria-hidden="true"></i>
+                </td>
+                <td class="pice4" ui-sref="menu.news">
+                    <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+                </td>
+            </tr>
+        </table>
     </ion-content>
 </ion-view>

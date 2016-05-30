@@ -9,8 +9,8 @@ angular.module('app.routes', [])
   $stateProvider
     
   .state('menu.home', {
-    url: '/home',
     
+    url: '/home',
     views: {
       'side-menu21': {
         templateUrl: 'templates/home.html',
@@ -20,6 +20,7 @@ angular.module('app.routes', [])
   })
 
   .state('menu.cart', {
+      cache: false,
     url: '/cart',
     views: {
       'side-menu21': {
@@ -30,6 +31,7 @@ angular.module('app.routes', [])
   })
   
   .state('menu.checkout', {
+      
     url: '/checkout',
     views: {
       'side-menu21': {
@@ -40,16 +42,18 @@ angular.module('app.routes', [])
   })
 
   .state('menu.product', {
+      cache: false,
     url: '/product/:type',
     views: {
       'side-menu21': {
-        templateUrl: 'templates/bag.html',
-        controller: 'bagCtrl'
+        templateUrl: 'templates/product.html',
+        controller: 'productCtrl'
       }
     }
   })
 
   .state('menu.detail', {
+      cache: false,
     url: '/detail/:id',
     views: {
       'side-menu21': {
@@ -69,11 +73,55 @@ angular.module('app.routes', [])
       }
     })
   
+   .state('menu.shop', {
+      cache: false,
+      url: '/shop',
+      views: {
+        'side-menu21': {
+          templateUrl: 'templates/shop.html',
+          
+        }
+      }
+    })
+  
+   .state('menu.news', {
+      cache: false,
+      url: '/news',
+      views: {
+        'side-menu21': {
+          templateUrl: 'templates/news.html',
+          
+        }
+      }
+    })
+  
+  .state('menu.galery', {
+      cache: false,
+      url: '/galery',
+      views: {
+        'side-menu21': {
+          templateUrl: 'templates/galery.html',
+            controller: 'galeryCtrl'
+          
+        }
+      }
+    })
+  
+  .state('menu.contact', {
+      cache: false,
+      url: '/contact',
+      views: {
+        'side-menu21': {
+          templateUrl: 'templates/contact.html',
+          
+        }
+      }
+    })
 
   .state('menu', {
     url: '/side-menu21',
-      
     templateUrl: 'templates/menu.html',
+    controller: 'menuCtrl',
     abstract:true
   })
 

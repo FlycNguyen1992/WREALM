@@ -1,20 +1,19 @@
 body {
-
     font-family: 'Asap', sans-serif;
     font-size: 13px;
     color: #555;
-    
 }
 
 .row {
     flex-wrap: wrap;
+    margin-top: -6px;
 }
 
 .desc {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
 }
 
 hr {
@@ -24,3 +23,414 @@ hr {
     clear: both;
 }
 
+
+/* Menu Style */
+
+#profile-bg {
+    position: fixed;
+    left: 0;
+    top: 44px;
+    width: 100%;
+    height: 150px;
+    background-size: 100%;
+    background-position: 50% 20%;
+    text-align: center;
+}
+
+#content {
+    position: relative;
+    margin-top: 150px;
+    background-color: white;
+    box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.4);
+    padding-top: 145px;
+}
+
+#profile-info {
+    position: absolute;
+    top: -95px;
+    width: 100%;
+    z-index: 2;
+    text-align: center;
+}
+
+#profile-name {
+    color: sandybrown;
+    font-size: 4vh;
+    font-family: cursive;
+}
+
+#profile-description {
+    font-size: 15px;
+    color: sandybrown;
+}
+
+#profile-description a {
+    color: #888;
+}
+
+#profile-image {
+    display: block;
+    border-radius: 100px;
+    border: 1px solid #cecece;
+    width: 128px;
+    height: 128px;
+    margin: 30px auto 0;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.7);
+}
+
+.list-item-content {
+    padding: 5px;
+}
+
+.list-item {
+    color: #666666;
+}
+
+.post {
+    color: #444;
+}
+
+.post-time {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    font-size: 11px;
+    color: #888;
+}
+
+.post-profile-image {
+    display: inline-block;
+    vertical-align: top;
+    width: 48px;
+    height: 48px;
+    margin-right: 10px;
+}
+
+.post-options {
+    position: absolute;
+    font-size: 16px;
+    right: 5px;
+    bottom: 5px;
+    color: #888;
+}
+
+.menu ion-content.scroll-content.ionic-scroll {
+    background-color: burlywood;
+}
+
+i.item item-icon-left {
+    color: sandybrown;
+}
+
+a.item.item-icon-left {
+    color: sandybrown;
+}
+
+.bar-stable .button.button-clear {
+    color: white;
+}
+
+ion-header-bar.bar-stable.bar.bar-header {
+    background: burlywood;
+}
+
+.bar-stable .button {
+    background-color: burlywood;
+    color: white;
+}
+
+.bar.bar-stable .title {
+    color: white;
+}
+
+.button-bar .button {
+    background: burlywood;
+    color: white;
+}
+
+ion-footer-bar.bar.bar-footer {
+    background: burlywood;
+}
+
+label.item.item-input.item-select.item-stable {
+    background-color: mintcream;
+}
+
+.item-select.item-stable select {
+    background: transparent;
+}
+
+#profile-info1 {
+    position: absolute;
+    
+    width: 100%;
+    z-index: 2;
+    text-align: center;
+}
+
+#profile-image1 {
+    display: block;
+    border-radius: 100px;
+    border: 2px solid #cecece;
+    width: 12vh;
+    height: 12vh;
+    margin: 30px auto 0;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.7);
+}
+
+#profile-name1 {
+    color: white;
+    font-size: 3vh;
+    font-family: inherit;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+#profile-name2 {
+    color: white;
+    font-size: 2vh;
+    font-family: inherit;
+    margin-top: 1%;
+}
+
+
+/*
+.col.col-50 contact {
+    text-align: center;
+}
+*/
+
+i.fa {
+    font-size: 12vh;
+    color: white;
+}
+
+.pice1 {
+    background: darkseagreen;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.pice2 {
+    background: skyblue;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.pice3 {
+    background: pink;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.pice4 {
+    background: wheat;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.item.item-input-inset {
+    background: silver;
+}
+
+a.button.button-icon.ion-ios-search {
+    color: white;
+}
+
+.scroll {
+    height: 100%;
+}
+
+.bar.bar-subheader.search-field {
+    background: transparent;
+}
+
+.list .item.item-accordion {
+  line-height: 38px;
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: 0.09s all linear;
+}
+
+ion-item.item-accordion.item.ng-hide {
+  line-height: 0px;
+}
+
+.list .item.item-accordion.ng-hide-add,
+.list .item.item-accordion.ng-hide-remove {
+  display: block !important;
+}
+
+ion-side-menu#side-menu21 ion-content.slide-in-both-ways.scroll-content.ionic-scroll .scroll {
+    height: 0%;
+}
+
+ion-item.item-stable.item {
+    background: white;
+    border-color: #ddd;
+    color: coral;
+}
+
+ion-item.item-stable.item.active {
+    border-color: #ddd;
+}
+
+.col.col-60 {
+    font-family: monospace;
+}
+
+span.stt {
+    font-size: 2vh;
+}
+
+p.dayw {
+    font-size: x-small;
+}
+
+a.item-content {
+    color: coral;
+}
+
+ion-item.item-accordion.item.item-icon-left.item-complex a.item-content {
+    background: coral;
+    color: white;
+}
+
+.item-avatar > img:first-child, .item-avatar .item-image, .item-avatar .item-content > img:first-child, .item-avatar .item-content .item-image, .item-avatar-left > img:first-child, .item-avatar-left .item-image, .item-avatar-left .item-content > img:first-child, .item-avatar-left .item-content .item-image {
+    position: absolute;
+    top: 6px;
+    left: 13px;
+    max-width: 50px;
+    max-height: 50px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+td {
+    width: 50%;
+}
+
+.socialicon {
+    font-size: 5vh;
+    text-align: center;
+    padding-top: 10px;
+    color: gray;
+}
+
+ion-content#contacts {
+    background: url(../img/back.jpg) no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+#profile-info2 {
+/*    position: absolute;*/
+    width: 100%;
+    z-index: 2;
+    text-align: left;
+    padding-left: 13%;
+}
+
+#profile-image2 {
+/*    display: block;*/
+    border-radius: 100px;
+/*    border: 2px solid #cecece;*/
+    width: 15vh;
+    height: 15vh;
+    margin: 30px auto 0;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.7);
+}
+
+#profile {
+   position: absolute;
+    padding-top: 14%;
+    padding-left: 5%;
+}
+
+#profile-name3 {
+    color: white;
+    font-size: 3vh;
+    font-family: inherit;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+#profile-name4 {
+    color: white;
+    font-size: 2vh;
+    font-family: inherit;
+    margin-top: 1%;
+    margin-bottom: 0;
+}
+
+#hr1 {
+    margin-left: 55px;
+    margin-right: 55px;
+    margin-top: 25px;
+    clear: both;
+    border-color: burlywood;
+}
+
+.allform {
+    padding-left: 35px;
+    padding-right: 35px;
+    color: white;
+    padding-top: 10px;
+}
+
+textarea#message {
+    width: 100%;
+    height: 100px;
+    border-radius: 5px;
+}
+
+input#email {
+    width: 100%;
+    border-radius: 5px;
+}
+
+input#name {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.feedback-input {
+    padding: 5px 5px 3px 5px;
+}
+
+.feedback-input:focus{
+	box-shadow: 0;
+	border: 3px solid #3498db;
+	color: #3498db;
+	outline: none;
+}
+
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+    padding-left: 5px;
+}
+
+.item-checkbox {
+    padding-left: 60px;
+    background: transparent;
+    border: transparent;
+    color: white;
+}
+
+.button.button-positive {
+    background-color: burlywood;
+}
+
+.button.button-positive.activated {
+    background-color: antiquewhite;
+}
+
+.list {
+    padding-bottom: 0px;
+    padding-top: 0px;
+  }
+
+.bar-stable .button:hover {
+    color: white;
+    text-decoration: none;
+}

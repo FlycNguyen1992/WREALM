@@ -27,7 +27,12 @@
         <br>
         <p ng-if="numitem>=1" class="subtotal" style="color: red; font-size: initial;">Subtotal : ${{totalprice(cart) | number:2}}</p>
         <p ng-if="numitem==0"> Your cart is empty </p>
-        <button ui-sref="menu.checkout" ng-if="numitem>=1" class="button button-assertive  button-block icon-left ion-clipboard">Check Out</button>
+        
 
     </ion-content>
+     <ion-footer-bar class="bar">
+          <div class="button-bar">
+            <button  ui-sref="menu.checkout" ng-if="numitem>=1" class="button">Check Out</button>
+        </div>
+    </ion-footer-bar>
 </ion-view>
